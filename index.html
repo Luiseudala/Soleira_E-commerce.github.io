@@ -24,6 +24,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   gtag('js', new Date());
 
   gtag('config', 'G-RGYHGHZ54K');
+	window.dataLayer = window.dataLayer || []
+
+window.dataLayer.push({
+    "event": "page_view",
+    "pageName":"Home"
+})
+console.log('Data sent to dataLayer:', window.dataLayer);
 </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
