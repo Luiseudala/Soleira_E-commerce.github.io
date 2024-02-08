@@ -45,6 +45,17 @@ window.dataLayer.push({
     "pageName":"Home" })
 	    </script>
 		
+		<script>
+function cartClick() {
+window.dataLayer = window.dataLayer || []
+window.dataLayer.push({
+    "event": "click",
+    "elemento": "botao"
+    "pageName":"home" })
+}
+document.getElementById('carrinho').addEventListener('click', cartClick);
+</script>
+		
 		<!-- Start Header/Navigation -->
 		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 
