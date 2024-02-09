@@ -45,16 +45,7 @@ window.dataLayer.push({
     "pageName":"Home" })
 	    </script>
 		
-		<script>
-function cartClick() {
-window.dataLayer = window.dataLayer || []
-window.dataLayer.push({
-    "event": "click",
-    "elemento": "botao"
-    "pageName":"home" })
-}
-document.getElementById('carrinho').addEventListener('click', cartClick);
-</script>
+
 		
 		<!-- Start Header/Navigation -->
 		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
@@ -80,7 +71,21 @@ document.getElementById('carrinho').addEventListener('click', cartClick);
 
 					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
 						<li><a class="nav-link" href="#"><img src="images/user.svg"></a></li>
-						<li><a id="carrinho" class="nav-link" href="cart.html"><img src="images/cart.svg"></a></li>
+						<li><a id="carrinho" class="nav-link" href="cart.html"><img src="images/cart.svg">
+							
+							<script>
+document.getElementById('carrinho').addEventListener('click', function () {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        'event': 'view_cart',
+        'ecommerce': {
+        'item_name':"Icon cart"
+    }
+         });
+             });
+ </script>
+						</a></li>
+						
 					</ul>
 				</div>
 			</div>
