@@ -124,11 +124,37 @@ window.dataLayer.push({
                           <td>
                             <div class="input-group mb-3 d-flex align-items-center quantity-container" style="max-width: 120px;">
                               <div class="input-group-prepend">
-                                <button class="btn btn-outline-black decrease" type="button">&minus;</button>
+                                <button id="bt1menos" class="btn btn-outline-black decrease" type="button">&minus;</button>
+				      <script>
+                                document.getElementById('bt1menos').addEventListener('click', function () {
+                                window.dataLayer = window.dataLayer || [];
+                                window.dataLayer.push({
+                                    'event': 'btn_minus',
+                                    'ecommerce': {
+                                        'currency': 'BRL',
+                                        'value': '49.00',
+					'item_name':"Product 1"
+                                    }
+                                });
+                            });
+				      </script>
                               </div>
                               <input type="text" class="form-control text-center quantity-amount" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
                               <div class="input-group-append">
-                                <button class="btn btn-outline-black increase" type="button">&plus;</button>
+                                <button id="bt1mais" class="btn btn-outline-black increase" type="button">&plus;</button>
+				      <script>
+                                document.getElementById('bt1mais').addEventListener('click', function () {
+                                window.dataLayer = window.dataLayer || [];
+                                window.dataLayer.push({
+                                    'event': 'btn_minus',
+                                    'ecommerce': {
+                                        'currency': 'BRL',
+                                        'value': '49.00',
+					'item_name':"Product 1"
+                                    }
+                                });
+                            });
+				      </script>
                               </div>
                             </div>
         
@@ -156,7 +182,8 @@ window.dataLayer.push({
                                     'event': 'btn_minus',
                                     'ecommerce': {
                                         'currency': 'BRL',
-                                        'value': '49.00'
+                                        'value': '49.00',
+					'item_name':"Product 1"
                                     }
                                 });
                             });
@@ -173,6 +200,7 @@ window.dataLayer.push({
                                     'ecommerce': {
                                         'currency': 'BRL',
                                         'value': '49.00'
+					'item_name':"Product 1"
                                     }
                                 });
                             });
